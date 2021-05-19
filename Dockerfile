@@ -46,7 +46,8 @@ RUN cd /app \
     && touch superset/static/version_info.json \
     && pip install --no-cache -r requirements/local.txt \
     # ws: install athena drivers
-    && pip install pip==18.1 \
+    #&& pip install pip==18.1 \
+    && pip install --upgrade pip \
     && pip install --no-cache PyAthena[SQLAlchemy] \
     && pip install --no-cache "PyAthenaJDBC>1.0.9"
 
