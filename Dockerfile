@@ -48,9 +48,10 @@ RUN cd /app \
     # ws: install athena drivers
     #&& pip install pip==18.1 \
     && pip install --upgrade pip \
-    && pip install --no-cache PyAthena[SQLAlchemy] \
-    && pip install --no-cache "PyAthenaJDBC>1.0.9"
-
+    #&& pip install --no-cache PyAthena[SQLAlchemy] \
+    #&& pip install --no-cache "PyAthenaJDBC>1.0.9"
+    && pip install apache-superset[athena] \
+    && pip install apache-superset[elasticsearch]
 ######################################################################
 # Node stage to deal with static asset construction
 ######################################################################
